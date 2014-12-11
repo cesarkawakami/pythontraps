@@ -1,0 +1,17 @@
+Python 2.7.3 (default, Apr 10 2013, 06:20:15) 
+[GCC 4.6.3] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+(RecordingConsole)
+>>> class Translator(object):
+...     def __init__(self, trans={}):
+...         self.trans = trans
+... 
+>>> spa = Translator()
+>>> spa.trans["PEN"] = "BOLIGRAFO"
+>>> port = Translator()
+>>> port.trans["PEN"] = "CANETA"
+>>> print "'PEN' in portuguese is", port.trans["PEN"]
+'PEN' in portuguese is CANETA
+>>> print "'PEN' in spanish is", spa.trans["PEN"]
+'PEN' in spanish is CANETA
+>>> 

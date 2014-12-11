@@ -1,0 +1,13 @@
+>>> x = ([1],)
+>>> x[0] = 2
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'tuple' object does not support item assignment
+>>> x
+([1],)
+>>> x[0] += [2, 3]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'tuple' object does not support item assignment
+>>> x
+([1, 2, 3],)

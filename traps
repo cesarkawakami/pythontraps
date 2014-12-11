@@ -1,0 +1,54 @@
+Python 2.7.3 (default, Apr 10 2013, 06:20:15) 
+[GCC 4.6.3] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+(RecordingConsole)
+>>> L = []
+>>> for i in xrange(5):
+...     def print_count():
+...         print "I'm counting", i
+...     L.append(print_count)
+...
+>>> for func in L:
+...     func()
+... 
+I'm counting 4
+I'm counting 4
+I'm counting 4
+I'm counting 4
+I'm counting 4
+>>>
+
+
+
+
+>>> def stub_log_error(exc):
+...     raise RuntimeError("could not log error")
+... 
+>>> try:
+...     1 / 0
+... except Exception as e:
+...     try:
+...         stub_log_error(e)
+...     except:
+...         pass
+...     raise
+... 
+Traceback (most recent call last):
+  ...
+RuntimeError: could not log error
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>> x = ([1],)
+>>> x[0] += [2, 3]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'tuple' object does not support item assignment
+>>> x
+([1, 2, 3],)
